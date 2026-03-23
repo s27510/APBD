@@ -13,7 +13,13 @@ The project is split by directories:
 assigment file for this tutorial.
 
 ## Design decision
+### Cohesion
 Each class has a single, clear responsibility where:
 * Models classes represent data
 * Services handle business logic
 * Program handles interaction
+
+### Coupling:
+Classes are freely coupled:
+* Services operate on models without tightly binding to each other
+* No business logic is placed in Program.cs, only the demostation logic
