@@ -1,0 +1,22 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Tutorial8.Models;
+
+public class Pc
+{
+    public int Id { get; set; }
+
+    [Required]
+    [MaxLength(100)]
+    public string Name { get; set; } = null!;
+
+    public double Weight { get; set; }
+
+    public int Warranty { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public int Stock { get; set; }
+
+    public ICollection<PcComponent> PcComponents { get; set; } = new List<PcComponent>();
+}
